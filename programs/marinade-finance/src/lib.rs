@@ -224,6 +224,16 @@ pub mod marinade_finance {
             .process(destination_stake_index, source_stake_index, validator_index)
     }
 
+    pub fn create_canonical_stake(
+        ctx: Context<CreateCanonicalStake>,
+        source_stake_index: u32,
+        validator_index: u32,
+    ) -> Result<()> {
+        check_context(&ctx)?;
+        ctx.accounts
+            .process(source_stake_index, validator_index)
+    }
+
     pub fn redelegate(
         ctx: Context<ReDelegate>,
         stake_index: u32,
