@@ -276,4 +276,10 @@ pub enum MarinadeError {
 
     #[msg("Invalid canonical stake account address")]
     InvalidCanonicalStakeAccountAddress, // 6088 0x17c8
+
+    #[msg("Deposit stake account fee is too high")]
+    DepositStakeAccountFeeIsTooHigh, // 6089 0x17c9
+
+    #[msg("Deposit SOL fee is too high")]
+    DepositSolFeeIsTooHigh, // 6090 0x17ca
 }
